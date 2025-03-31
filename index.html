@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <!-- Production version of Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .video-thumbnail {
+            aspect-ratio: 16/9;
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/3394599/pexels-photo-3394599.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-bars text-gray-700 text-xl"></i>
+                <div class="flex items-center">
+                    <i class="fab fa-youtube text-red-600 text-3xl"></i>
+                    <span class="ml-2 text-xl font-semibold">YouTube</span>
+                </div>
+            </div>
+            
+            <div class="flex-1 max-w-2xl mx-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search" class="w-full border border-gray-300 rounded-l-full py-2 px-4 focus:outline-none focus:border-blue-500">
+                    <button class="bg-gray-100 border border-l-0 border-gray-300 rounded-r-full px-5 py-2">
+                        <i class="fas fa-search text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-video text-gray-700 text-xl"></i>
+                <i class="fas fa-bell text-gray-700 text-xl"></i>
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Profile" class="w-8 h-8 rounded-full">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">Watch, Learn, Explore</h1>
+            <p class="text-xl mb-8">Discover millions of videos from creators around the world</p>
+            <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full">
+                Explore Videos
+            </button>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="container mx-auto px-4 py-8">
+        <div class="flex space-x-4 overflow-x-auto pb-4">
+            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full whitespace-nowrap">All</button>
+            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full whitespace-nowrap">Music</button>
+            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full whitespace-nowrap">Gaming</button>
+            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full whitespace-nowrap">News</button>
+            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full whitespace-nowrap">Live</button>
+            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full whitespace-nowrap">Cooking</button>
+            <button class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full whitespace-nowrap">Recently uploaded</button>
+        </div>
+    </section>
+
+    <!-- Video Grid -->
+    <section class="container mx-auto px-4 py-8">
+        <h2 class="text-2xl font-bold mb-6">Recommended Videos</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Video Card 1 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div class="video-thumbnail relative">
+                    <img src="https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg" alt="Video Thumbnail" class="w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">10:30</span>
+                </div>
+                <div class="p-4">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Channel" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h3 class="font-semibold line-clamp-2">Amazing Nature Scenes - Relaxing Video</h3>
+                            <p class="text-gray-600 text-sm">Nature Channel</p>
+                            <p class="text-gray-600 text-sm">1.2M views • 2 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Card 2 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div class="video-thumbnail relative">
+                    <img src="https://images.pexels.com/photos/3566226/pexels-photo-3566226.jpeg" alt="Video Thumbnail" class="w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">15:45</span>
+                </div>
+                <div class="p-4">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" alt="Channel" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h3 class="font-semibold line-clamp-2">How to Make Perfect Coffee at Home</h3>
+                            <p class="text-gray-600 text-sm">Coffee Master</p>
+                            <p class="text-gray-600 text-sm">856K views • 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Card 3 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div class="video-thumbnail relative">
+                    <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg" alt="Video Thumbnail" class="w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">8:22</span>
+                </div>
+                <div class="p-4">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg" alt="Channel" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h3 class="font-semibold line-clamp-2">JavaScript Tips for Beginners</h3>
+                            <p class="text-gray-600 text-sm">Code Academy</p>
+                            <p class="text-gray-600 text-sm">2.3M views • 3 months ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Card 4 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+                <div class="video-thumbnail relative">
+                    <img src="https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg" alt="Video Thumbnail" class="w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">5:10</span>
+                </div>
+                <div class="p-4">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg" alt="Channel" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h3 class="font-semibold line-clamp-2">5 Minute Morning Yoga Routine</h3>
+                            <p class="text-gray-600 text-sm">Yoga Life</p>
+                            <p class="text-gray-600 text-sm">3.1M views • 5 months ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center mb-4">
+                        <i class="fab fa-youtube text-red-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-semibold">YouTube</span>
+                    </div>
+                    <p class="text-gray-400">© 2023 YouTube Clone</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">About</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Press</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Help</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Community</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Copyright</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple search functionality
+        document.querySelector('input[type="text"]').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                window.location.href = 'search.html?q=' + encodeURIComponent(this.value);
+            }
+        });
+    </script>
+</body>
+</html>
