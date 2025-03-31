@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player - YouTube Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .video-container {
+            aspect-ratio: 16/9;
+        }
+        .progress-bar {
+            height: 4px;
+            background-color: #e0e0e0;
+        }
+        .progress-filled {
+            height: 100%;
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="flex items-center">
+                    <i class="fab fa-youtube text-red-600 text-3xl"></i>
+                    <span class="ml-2 text-xl font-semibold">YouTube</span>
+                </a>
+            </div>
+            
+            <div class="flex-1 max-w-2xl mx-4">
+                <div class="relative">
+                    <input type="text" placeholder="Search" class="w-full border border-gray-300 rounded-l-full py-2 px-4 focus:outline-none focus:border-blue-500">
+                    <button class="bg-gray-100 border border-l-0 border-gray-300 rounded-r-full px-5 py-2">
+                        <i class="fas fa-search text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-video text-gray-700 text-xl"></i>
+                <i class="fas fa-bell text-gray-700 text-xl"></i>
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Profile" class="w-8 h-8 rounded-full">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Video Player Section -->
+            <div class="flex-1">
+                <div class="video-container bg-black rounded-lg overflow-hidden">
+                    <video id="main-video" class="w-full h-full" poster="https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg">
+                        <source src="#" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Video Info -->
+                <div class="mt-4">
+                    <h1 class="text-2xl font-bold">Amazing Nature Scenes - Relaxing Video</h1>
+                    <div class="flex items-center justify-between mt-2">
+                        <div class="flex items-center space-x-4">
+                            <span class="text-gray-600">1.2M views</span>
+                            <span class="text-gray-600">•</span>
+                            <span class="text-gray-600">2 weeks ago</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <button class="flex items-center space-x-1 text-gray-700 hover:text-red-600">
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>125K</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-700 hover:text-red-600">
+                                <i class="fas fa-thumbs-down"></i>
+                                <span>1K</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-700 hover:text-red-600">
+                                <i class="fas fa-share"></i>
+                                <span>Share</span>
+                            </button>
+                            <button class="flex items-center space-x-1 text-gray-700 hover:text-red-600">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Channel Info -->
+                <div class="mt-6 flex items-center justify-between border-t border-b border-gray-200 py-4">
+                    <div class="flex items-center space-x-4">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Channel" class="w-12 h-12 rounded-full">
+                        <div>
+                            <h3 class="font-semibold">Nature Channel</h3>
+                            <p class="text-gray-600 text-sm">1.5M subscribers</p>
+                        </div>
+                    </div>
+                    <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full">
+                        Subscribe
+                    </button>
+                </div>
+
+                <!-- Video Description -->
+                <div class="mt-4 bg-gray-50 p-4 rounded-lg">
+                    <div class="flex items-center space-x-4 mb-2">
+                        <span class="font-semibold">125K views</span>
+                        <span class="text-gray-600">•</span>
+                        <span class="text-gray-600">2 weeks ago</span>
+                    </div>
+                    <p class="text-gray-800">
+                        Enjoy these breathtaking nature scenes from around the world. Perfect for relaxation, meditation, or just enjoying the beauty of our planet. 
+                        <br><br>
+                        Locations featured: 
+                        - Amazon Rainforest
+                        - Swiss Alps
+                        - Great Barrier Reef
+                        - Sahara Desert
+                    </p>
+                </div>
+            </div>
+
+            <!-- Related Videos -->
+            <div class="lg:w-80 space-y-4">
+                <h2 class="text-xl font-semibold">Up next</h2>
+                
+                <!-- Related Video 1 -->
+                <div class="flex space-x-2">
+                    <div class="w-40 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3566226/pexels-photo-3566226.jpeg" alt="Related Video" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold line-clamp-2">Beautiful Waterfalls Around the World</h3>
+                        <p class="text-gray-600 text-sm">Nature Channel</p>
+                        <p class="text-gray-600 text-sm">856K views • 1 month ago</p>
+                    </div>
+                </div>
+
+                <!-- Related Video 2 -->
+                <div class="flex space-x-2">
+                    <div class="w-40 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                        <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg" alt="Related Video" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold line-clamp-2">Forest Sounds for Relaxation</h3>
+                        <p class="text-gray-600 text-sm">Nature Sounds</p>
+                        <p class="text-gray-600 text-sm">2.3M views • 3 months ago</p>
+                    </div>
+                </div>
+
+                <!-- Related Video 3 -->
+                <div class="flex space-x-2">
+                    <div class="w-40 h-24 bg-gray-200 rounded-lg overflow-hidden">
+                        <img src="https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg" alt="Related Video" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold line-clamp-2">Ocean Waves for Deep Sleep</h3>
+                        <p class="text-gray-600 text-sm">Ocean Sounds</p>
+                        <p class="text-gray-600 text-sm">3.1M views • 5 months ago</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Basic video player functionality
+        const video = document.getElementById('main-video');
+        
+        // Play/pause on click
+        video.addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+    </script>
+</body>
+</html>
